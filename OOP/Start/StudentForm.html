@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Form</title>
+    <style>
+        table {
+            width: 300px;
+            margin: 100px auto;
+            background: antiquewhite;
+            color: black;
+            font-size: 15px;
+            font-family: "Times New Roman";
+        }
+        table th{
+            font-size: 22px;
+            background: blue;
+            color: black;
+            padding: 10px;
+            align-content: center;
+        }
+    </style>
+</head>
+<body>
+<form action="" name="frm1" method="post">
+    <table>
+        <thead>
+        <tr>
+            <th colspan="3">Student Input</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>ID</td>
+            <td><input type="text" name="id"  size="25"></td>
+        </tr>
+        <tr>
+            <td>Full Name</td>
+            <td><input type="text" name="name" size="25"></td>
+        </tr>
+        <tr>
+            <td>Birhday</td>
+            <td><input type="date" name="birthday" size="25"></td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td>
+                <input type="radio" name="gender" value="male">Male
+                <input type="radio" name="gender" value="famale">Female
+                <input type="radio" name="gender" value="other"checked>Other
+            </td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td><input type="text" name="addr" size="25"></td>
+        </tr>
+        <tr>
+            <td>Class</td>
+            <td>
+                <select>
+                    <option>CO08</option>
+                    <option>CO09</option>
+                    <option>CK08</option>
+                    <option>CK09</option>
+                    <option>HH07</option>
+                    <option>HH08</option>
+                    <option>CN07</option>
+                    <option>CN08</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Department</td>
+            <td>
+                <select>
+                    <option>Co khi</option>
+                    <option>Che tao may</option>
+                    <option>Cong nghe thong tin</option>
+                    <option>Hang Hai</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="reset" name="reset" value="Cancel">
+                &nbsp &nbsp &nbsp &nbsp
+                <input type="submit" name="add" value="Add">
+            </td>
+        </tr>
+        </tbody>
+
+    </table>
+</form>
+
+</body>
+</html>

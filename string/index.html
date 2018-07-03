@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>String</title>
+</head>
+<body>
+<p>str: <STRONG>Le-Van-Liem</STRONG></p>
+<p><strong>str.indexOf(str1):</strong> Xac dinh vi tri xuat hien dau tien cua chuoi str1 trong str, khong tim thay tra ve -1</p>
+<p id="id1"></p>
+<br>
+<p><strong>str.lastIndexOf(str1):</strong> Xac dinh vi tri xuat hien cuoi cung cua chuoi str1 trong str, khong tim thay tra ve -1</p>
+<p id = "id2"></p>
+<br>
+<p><strong>str.search(str1):</strong> Tim chuoi str1 trong chuoi str</p>
+<p id="id3"></p>
+<br>
+<p><strong>str.slice(start,end), str.substring(start,end) va str.substr(start,lengh):</strong>Trich xuat 1 chuoi tu chuoi str</p>
+<p id="id4"></p>
+<p id="id5"></p>
+<p id="id6"></p>
+<br>
+<p><strong>str.replace(str1,str2,str):</strong> Thay the chuoi str1 bang str2 trong str, neu muon thay the toan bo str1 thi them '/g' sau params str1</p>
+<p id="id7"></p>
+<p id="id8"></p>
+<br>
+<p><strong>str.toLowerCase(str), str.toUperCase():</strong>Chuyen chuoi thanh in thuong va in hoa</p>
+<p id="id9"></p>
+<p id="id10"></p>
+<br>
+<p><strong>str.charAt(index), str.charCodeAt(index) va str[index]:</strong>: Tra ve 1 ky tu (hoac gia tri cua ky tu trong bang ASCII - charCodeAt) tai vi tri index</p>
+<p id="id11"></p>
+<p id="id12"></p>
+<br>
+<p><strong>str.split(separator):</strong>Chuyen chuoi thanh mang, cat tung phan tu tai ky tu separator</p>
+<p id="id13"></p>
+<br>
+
+<p><strong>str.concat(str1,str2): </strong>Gop chuoi str1 va str2 vao str</p>
+<p id="id14"></p>
+<br>
+    <script>
+        var str = "Le-Van-Liem";
+        var str1 = str.indexOf("Liem");
+        document.getElementById('id1').innerText =
+            "Vi tri xuat hien dau tien cua chuoi 'Liem' trong chuoi 'str' la: " + str1;
+
+        document.getElementById("id2").innerText =
+            "Vi tri xuat hien cuoi cung cua chuoi 'e' trong chuoi 'str' la: " + str.lastIndexOf('e');
+
+        document.getElementById("id3").innerText =
+            "Chuoi 'an' nam trong chuoi 'str' a o vi tri: " + str.search('an');
+
+        document.getElementById("id4").innerText =
+            "slice - Chuoi con cat tu chuoi 'str' bat dau tu vi tri 3 den vi tri 7: " + str.slice(3,7);
+
+        document.getElementById("id5").innerText =
+            "substring - Chuoi con cat tu chuoi 'str' bat dau vi tri thu 1 den vi tri thu 5: " + str.substring(1,5);
+
+        document.getElementById("id6").innerText =
+            "substr - Chuoi con cat tu chuoi 'str' bat dau tu vi tri 0 voi chieu dai la 4: " + str.substr(0,4);
+
+        document.getElementById('id7').innerText =
+            "Thay chuoi 'Van' bang chuoi 'V' trong 'str': " + str.replace("Van","V",str);
+
+        document.getElementById("id8").innerText =
+            "Thay the toan bo chuoi 'e' bang chuoi 't' trong str: " + str.replace(/e/g,"t",str);
+
+        document.getElementById("id9").innerText = "Chuyen str thanh chu in thuong: " + str.toLowerCase();
+        document.getElementById("id10").innerText = "Chuyen str thanh chuoi in hoa: "+str.toUpperCase();
+
+        document.getElementById('id11').innerText = "Lay ky tu thu 3 trong chuoi str: " + str[3];
+        document.getElementById("id12").innerText = "Gia tri cua ky tu thu 3 trong chuoi str: " + str.charCodeAt(3);
+
+        document.getElementById("id13").innerText =
+            "Chuyen chuoi str thanh mang, cat phan tu tai ky tu '-': "+ str.split("-");
+
+        document.getElementById("id14").innerText =
+            "Gop chuoi '-', 'Tien-Phuoc', '-' va 'Quang-Nam' vao sau chuoi 'str': " + str.concat("-","Tien-Phuoc","-","Quang-Nam");
+
+    </script>
+</body>
+</html>
